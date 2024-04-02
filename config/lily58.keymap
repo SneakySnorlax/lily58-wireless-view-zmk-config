@@ -9,6 +9,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        test: password {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(D) &kp E &kp A &kp D &kp P &kp O &kp O &kp L &kp N9 &kp N2 &kp EXCL>;
+            label = "PASSWORD";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -42,11 +51,11 @@
 
             display-name = "Lower";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans          &kp UP_ARROW  &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &kp LEFT_ARROW  &kp DOWN      &kp RIGHT     &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans          &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                          &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans
+&bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp CAPS          &trans        &trans        &kp UP_ARROW  &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_CONTROL  &trans        &kp LEFT      &kp DOWN      &kp RIGHT     &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHIFT        &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                              &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -62,7 +71,7 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &test
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
