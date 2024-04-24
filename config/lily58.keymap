@@ -10,11 +10,18 @@
 
 / {
     macros {
-        test: password {
+        Pass: password {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(D) &kp E &kp A &kp D &kp P &kp O &kp O &kp L &kp N9 &kp N2 &kp EXCL>;
+            bindings = <&kp LS(T) &kp H &kp E &kp F &kp L &kp A &kp S &kp H &kp N9 &kp N2 &kp EXCL>;
             label = "PASSWORD";
+        };
+
+        File_Explorer: File_Explorer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(E)>;
+            label = "FILE_EXPLORER";
         };
     };
 
@@ -31,11 +38,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                           &kp N6         &kp N7  &kp N8     &kp N9   &kp N0    &kp EQUAL
-&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                            &kp Y          &kp U   &kp I      &kp O    &kp P     &kp MINUS
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                            &kp H          &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B   &kp LBKT      &kp RBKT   &kp N          &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp DELETE
-                           &kp LALT  &kp LGUI  &mo 1   &kp RETURN    &kp SPACE  &kp BACKSPACE  &mo 2   &kp RGUI
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                           &kp N6         &kp N7  &kp N8          &kp N9   &kp N0    &kp EQUAL
+&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                            &kp Y          &kp U   &kp I           &kp O    &kp P     &kp MINUS
+&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                            &kp H          &kp J   &kp K           &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B   &kp LBKT      &kp RBKT   &kp N          &kp M   &kp COMMA       &kp DOT  &kp FSLH  &kp DELETE
+                           &kp LALT  &kp LGUI  &mo 1   &kp RETURN    &kp SPACE  &kp BACKSPACE  &mo 2   &File_Explorer
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -71,7 +78,7 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &test
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &Pass
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
