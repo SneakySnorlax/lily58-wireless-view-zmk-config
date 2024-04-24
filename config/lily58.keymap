@@ -23,6 +23,13 @@
             bindings = <&kp LG(E)>;
             label = "FILE_EXPLORER";
         };
+
+        Screenshot: Screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(S))>;
+            label = "SCREENSHOT";
+        };
     };
 
     keymap {
@@ -59,7 +66,7 @@
             display-name = "Lower";
             bindings = <
 &bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp CAPS          &trans        &trans        &kp UP_ARROW  &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&kp CAPS          &trans        &kp HOME      &kp UP_ARROW  &kp END       &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_CONTROL  &trans        &kp LEFT      &kp DOWN      &kp RIGHT     &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &kp LSHIFT        &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                               &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans
@@ -81,7 +88,7 @@
 &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &Pass
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &Screenshot
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
 
