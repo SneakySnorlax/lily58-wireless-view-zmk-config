@@ -13,7 +13,7 @@
         Pass: password {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(T) &kp H &kp E &kp F &kp L &kp A &kp S &kp H &kp N9 &kp N2 &kp EXCL>;
+            bindings = <&kp LS(M) &kp O &kp N &kp K &kp E &kp Y &kp D &kp L &kp U &kp F &kp F &kp Y &kp N9 &kp N2>;
             label = "PASSWORD";
         };
 
