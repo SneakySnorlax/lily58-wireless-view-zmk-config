@@ -13,7 +13,7 @@
         Pass: password {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(M) &kp O &kp N &kp K &kp E &kp Y &kp D &kp L &kp U &kp F &kp F &kp Y &kp N9 &kp NUMBER_4>;
+            bindings = <&kp LS(M) &kp O &kp N &kp K &kp E &kp Y &kp D &kp L &kp U &kp F &kp F &kp Y &kp N9 &kp N5>;
             label = "PASSWORD";
         };
 
@@ -29,6 +29,20 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LG(S))>;
             label = "SCREENSHOT";
+        };
+
+        Left_DE: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(LEFT_ARROW))>;
+            label = "NEW_MACRO";
+        };
+
+        Right_DE: Right_DE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(RIGHT_ARROW))>;
+            label = "RIGHT_DE";
         };
     };
 
@@ -68,7 +82,7 @@
 &bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
 &kp CAPS          &trans        &kp HOME      &kp UP_ARROW  &kp END       &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_CONTROL  &trans        &kp LEFT      &kp DOWN      &kp RIGHT     &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHIFT        &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHIFT        &trans        &Left_DE      &trans        &Right_DE     &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                               &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans
             >;
 
