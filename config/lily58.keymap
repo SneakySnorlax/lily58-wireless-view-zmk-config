@@ -48,11 +48,7 @@
         language_swap: language_swap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LG(SPACE)>,
-                <&macro_wait_time 250>,
-                <&kp LS(CAPSLOCK)>;
-
+            bindings = <&kp LS(CAPSLOCK)>;
             label = "LANGUAGE_SWAP";
         };
     };
