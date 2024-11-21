@@ -50,7 +50,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(SPACE)>,
-                <&macro_wait_time 50>,
+                <&macro_wait_time 250>,
                 <&kp LS(CAPSLOCK)>;
 
             label = "LANGUAGE_SWAP";
